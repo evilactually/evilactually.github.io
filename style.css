@@ -51,7 +51,7 @@ a:active {
 
 .title {
 	width: 100%;
-	background-color: rgb(39, 40, 34);
+	background-color: #f0f6f0;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;
@@ -348,7 +348,7 @@ a:active {
 .sectionButton {
 	font-family: 'Lato', sans-serif;
 	font-size: 11;
-	color: #666;
+	color: #222323;
 	float: left;
 	clear: both;
 	padding: 5px;
@@ -360,18 +360,18 @@ a:active {
 }
 
 .sectionButton:hover {
-	color: #fff;
-	background-color: #333;
+	color: #222323;
+	background-color: #ede19e;
 }
 
 .current {
-	color: #fff;
-	background-color: #333;
+	color: #222323;
+	background-color: #ede19e;
 	/*outline: solid 1px #444;*/
 }
 
 .sectionButton a:link {
-	color: #666;
+	color: #222323;
 	text-decoration: none;
 }
 
@@ -381,17 +381,17 @@ a:active {
 }
 
 .sectionButton a:hover {
-    color: #fff;
+    color: #222323;
     text-decoration: none;
 }
 
 .sectionButton a:active {
-    color: #666;
+    color: #222323;
     text-decoration: none;
 }
 
 .sectionButton:hover a {
-    color: #fff;
+    color: #222323;
     text-decoration: none;
 }
 

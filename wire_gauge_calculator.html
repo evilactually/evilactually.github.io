@@ -27,14 +27,10 @@
 		        );
 		</script>
 
-		<!-- <script type="text/javascript"
-		   src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG">
-		</script> -->
+		<script type="text/javascript" id="MathJax-script" async
+  		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+		</script>
 
-
-		<!-- <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
- -->
 		<style>
 			@import url("./fontello-b1d57784/css/fontello.css");
 			@import url("./style.css");
@@ -64,38 +60,12 @@
 	 	</table>
   	</div>
 
-	<div class="littleheader"> WIRE GAUGE CALCULATOR
-		<div class="subheader" style="font-size: 14px"> TOOL </div>
+	<div class="littleheader"> EQUIVALENT GUAGE CALCULATOR
+		<div class="subheader" style="font-size: 14px"> A TOOL FOR CHOOSING TERMINATION SIZE   </div>
 	</div>
 
 	<script>
-		var PHASOR_FREQUENCY = 2;
-		var PHASOR_AMPLITUDE = 1;
-		var TARGET_PHASOR_FREQUENCY = 2;
-		var TARGET_PHASOR_AMPLITUDE = 1;
-		var PHASOR_INTERPOLATOR = d3.interpolateNumber(PHASOR_FREQUENCY, TARGET_PHASOR_FREQUENCY);
-		var PHASOR_AMP_INTERPOLATOR = d3.interpolateNumber(PHASOR_AMPLITUDE, TARGET_PHASOR_AMPLITUDE);
-		var PHASOR_INTERPOLATION = 1.0;
-		var PHASOR_AMP_INTERPOLATION = 1.0;
-		function GET_PHASOR_FREQUENCY() {
-			return PHASOR_INTERPOLATOR(Math.min(PHASOR_INTERPOLATION, 1.0));
-		}
-		function GET_PHASOR_AMPLITUDE() {
-			return PHASOR_AMP_INTERPOLATOR(Math.min(PHASOR_AMP_INTERPOLATION, 1.0));
-		}
-		function updateFreq(freq) {
-			PHASOR_FREQUENCY = GET_PHASOR_FREQUENCY();
-			TARGET_PHASOR_FREQUENCY = freq;
-			PHASOR_INTERPOLATION = 0.0;
-			PHASOR_INTERPOLATOR = d3.interpolateNumber(PHASOR_FREQUENCY, TARGET_PHASOR_FREQUENCY);
-		}
-		function updateAmp(amp) {
-			PHASOR_AMPLITUDE = GET_PHASOR_AMPLITUDE();
-			TARGET_PHASOR_AMPLITUDE = amp / 5000;
-			PHASOR_AMP_INTERPOLATION = 0.0;
-			PHASOR_AMP_INTERPOLATOR = d3.interpolateNumber(PHASOR_AMPLITUDE, TARGET_PHASOR_AMPLITUDE);
-		}
-
+		
 		function awg_to_d(awg) {
 			return 0.127 * 92**((36.0-awg)/39.0);
 		}
@@ -110,7 +80,6 @@
 		}
 
 		function updateOutputGauge() {
-			//document.getElementById("out_gauge").value = gauge;
 			var gauge = parseInt(document.getElementById("in_gauge").value);
 			var multiplier = parseInt(document.getElementById("in_count").value);
 			var r = awg_to_d(document.getElementById("in_gauge").value)/2.0;
@@ -122,133 +91,83 @@
 
 			document.getElementById("out_gauge").value = awg_out;
 		}
-
-		function updateInputCount(count) {
-			//document.getElementById("out_gauge").value = awg_to_d(document.getElementById("out_gauge").value); //count*(parseInt(document.getElementById("out_gauge").value, 10));
-		}
-
-		
 	</script>
 
   	<table class="figureTable">
 		<tr>
 			<td style="vertical-align: top;">
-				<div class="text" style="margin-left: 0px">
 				<p>
-				Quick tool to find gauge-equivalent to multiple of wire runs.
+					It is often required to crimp multiple conductors of the same gauge into the same termination. In order to do that
+					with some amount of diligence you would need to know the size of the termination that would fit the combined wires.
 				</p>
+				<p>
+					Here's a simple calculator that calculates an equivalent gauge of multiple conductors:
+				</p>
+				
 
 				<br/>
 				<table>
-
-						<tr>
-							<td>
-								Wire Gauge
-							</td>
-							<td>
-								&times;
-							</td>
-							<td>
-								Count
-							</td>
-							<td>
-								= 
-							</td>
-							<td>
-								Wire Gauge
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type=number min=0 max=26 value=18 id=in_gauge oninput="updateOutputGauge();">
-							</td>
-							<td>
-								&times;
-							</td>
-							<td>
-								<input type=number min=0 max="100" value=1 id=in_count oninput="updateOutputGauge();">
-							</td>
-							<td>
-								= 
-							</td>
-							<td>
-								<input type=number readonly="true" min=0 max=26 value=18 id=out_gauge oninput="">
-							</td>
-						</tr>
-
-						<!-- <tr>
-							<td>
-								<svg id="phasor" class="svgWithText" width="600" height="150" style="margin-left: 50px; margin-right: 100px;"></svg>
-								<script type="text/javascript" src="js/phasor_sine.js"></script>
-
-								<div class="controls">
-									<label for=freqFader>Times</label><br/>
-									<input type=range min=2 max=16 value=2 id=freqFader step=1 width=150 oninput="updateFreq(value);"><br/>
-									<label for=ampFader>Wire Gauge</label><br/>
-									<input type=range min=0 max=24 value=5000 id=ampFader step=1 width=150 oninput="updateAmp(value);">
-								</div>
-  							</td>
-						</tr> -->
+					<tr>
+						<td style="font-weight: bold;">
+							Wire Gauge
+						</td>
+						<td>
+							&times;
+						</td>
+						<td style="font-weight: bold;">
+							Count
+						</td>
+						<td style="font-weight: bold;">
+							= 
+						</td>
+						<td style="font-weight: bold;">
+							Wire Gauge
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type=number style="width: 100%;" min=0 max=26 value=18 id=in_gauge oninput="updateOutputGauge();">
+						</td>
+						<td>
+							&times;
+						</td>
+						<td>
+							<input type=number style="width: 100%;" min=0 max="100" value=1 id=in_count oninput="updateOutputGauge();">
+						</td>
+						<td>
+							= 
+						</td>
+						<td>
+							<input type=number style="width: 100%;" readonly="true" min=0 max=26 value=18 id=out_gauge oninput="">
+						</td>
+					</tr>
   				</table>
-  				<br/>
+
   				<p>
-  				The construction in <i>Figure 1</i> is so important to our studies that we’ll give it a special name, the <i>phasor</i>.<sup>2</sup> Any time you see the term <i>phasor</i> in this text you should think of a line spinning around in a circle. In later sections we will see how phasors can be combined to create arbitrarily complex wave shapes.
-  				</p>
+  					The wiki page gives following definition of <em> American Wire Gauge</em> and its relation to conductor diameter.
+					$$ d = 0.127\ mm \times 92^{(36-n)/39} $$
+					where \(n\) is the gauge.
+				</p>
+				<p>
+					From that we can calculate the area of combined conductors:
+					$$ A = \pi r^2 \times x = \pi(\frac{d}{2})^2 \times x $$
+				</p>
+				<p>
+					In order to calculate wire gauge from area we need to solve first equation for \(n\) in terms of \(d\):
+					$$ n = 36 - 39 \frac{log{(\frac{d}{0.127})}}{\log{(92)}} $$
+				</p>
+				<p>
+					Then it's simple enough to find diameter from area.
+				</p>
   				</td>
 				<td class="figureExplanation" style="">
 				<b>1.</b>
-					It’s worth watching Brad Osgood discuss the nature of sine and cosine in <a href="http://youtu.be/gZNm7L96pfY?t=48m35s">this lecture</a> from Stanford University.<br/><br/>
-				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-				<br/><br/><br/>
-				<b>2.</b>
-					We’re being a bit fast and loose with the terminology here. "Phasor" can mean a number of different things depending upon who you’re speaking with. If you take umbrage at my naming and have a better idea, let me know.<br/><br/>
-			</td>
-		</tr>
-	</table>
-
-	<div class="littleheader"> THE COSINE WAVE
-		<div class="subheader" style="font-size: 14px"> THE COUNTERPART TO SINE </div>
-	</div>
-
-	<table class="figureTable">
-		<tr>
-			<td style="vertical-align: top;" width="160px">
-				<div class="text" style="margin-left: 0px; width: 160px">
-					<table width="160px">
-							<tr class="figureCaption">
-								<td>
-									<b>Figure 2.</b>&nbsp; The Cosine Wave
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<svg id="phasor2" class="svgWithText" width="150" height="350" style=""></svg>
-									<script type="text/javascript" src="js/phasor_cosine.js"></script>
-	  							</td>
-							</tr>
-	  				</table>
-	  			</div>
-  			</td>
-  			<td style="vertical-align: top" width="750">
-  				<span style="display:inline-block; vertical-align: top">
-  				<div class="textfontonly" style="margin-top: 0px; padding-left: 30px">
-  				<p>
-  				<i>Cosine</i> waves are generated in a similar fashion to sine waves, except that we trace the <i>horizontal</i> distance from the center of the circle to the tip of the line. In actuality, sine and cosine wave have exactly the same shape. One is just a <i>rotated</i> version of the other. If you don’t believe me, rotate your head 90 degrees to the right and you’ll find that the cosine wave has become a sine wave.
-  				</p>
-  				<p>
-  				Sine and cosine are exceptionally interesting, and their relationship to one another is crucially important for the functioning of the Fourier Transform. For the time being, our main takeaway from this section should be that sine and cosine are periodic functions with a deep connection to movement about the unit circle. It’s this deep connection to the circle which gives sine and cosine a number of very astonishing properties which we'll investigate in detail in later sections. In the next section we’ll reacquaint ourselves with the unit-circle and some basic trigonometric properties before returning to the question of sampling.
-  				</p>
-  				</div>
-  				</span>
-  			</td>
-			<td class="figureExplanation" style="">
-				
+					NOTE:
+					$$ \log_{92}{(x)} = \frac{\log{(x)}}{\log{(92)}} $$
 			</td>
 		</tr>
 	</table>
 	<br/>
-
 
   	<div class="title" id="footer"></div><script type="text/javascript" src="menu.js"></script></body>
 </html>

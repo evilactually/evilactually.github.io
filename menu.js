@@ -52,7 +52,7 @@ for (var i = 0; i < menuoptions.length; i++)
     : 'sectionButton';
 
   var style = currentPage === menuoptions[i][1] && !ispartheader && i != 0
-    ? "color: #bbb;"
+    ? "color: #222323;"
     : "";
 
   style += ispartheader
@@ -81,7 +81,7 @@ for (var i = 0; i < menuoptions.length; i++)
 
 
 var titleContents =
-'<div style="color: #ddd; font-size: 22px">SEEING <span style="color:rgb(93,217,241)">CIRCLES</span>, <span style="color:rgb(243,48,110);">SINES</span>, AND <span style="color:rgb(232,218,106);">SIGNALS</span><!--<svg id="phasortitle" class="svgWithText" width="500" height="20" style="display: inline">--></svg></div><div class="subheader" style="margin-top: 0px; color: #888; font-size: 18px; width: 800px">A COMPACT PRIMER ON DIGITAL SIGNAL PROCESSING<span id="icons" style="margin-left: 10"></span></div>';
+'<div style="color: #222323; font-size: 22px"><span style="color: #4b80ca">EE</span><span style="color: #b45252">VIL ACTUALLY</span></div><div class="subheader" style="margin-top: 0px; color: #888; font-size: 18px; width: 800px">RANDOM ELECTRICAL ENGINEERING<span id="icons" style="margin-left: 10"></span></div>';
 
 document.getElementById('titleinfo').innerHTML = titleContents;
 
