@@ -23,38 +23,48 @@
   <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Motor direction tester</small></i></span>
 </p>
 
+<?php h("HOW TO DECODE MOTOR STATE FROM HALL SENSOR SIGNALS");?>
+
 <picture  >
-    <source srcset="halls.jpg" type="image/jpeg">
-    <?php img("halls.jpg", 50, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
+    <source srcset="halls.bmp" type="image/jpeg">
+    <?php img("halls.bmp", 100, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
   </picture>
-  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Hall signal is three square waves with phase 0 degree, 120 degree and 240 degree.</small></i></span>
+  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Hall signal is the three square waves with phase 0 degree, 120 degree and 240 degree.</small></i></span>
 
 
 <picture  >
-    <source srcset="state.jpg" type="image/jpeg">
-    <?php img("state.jpg", 50, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
+    <source srcset="state.bmp" type="image/jpeg">
+    <?php img("state.bmp", 100, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
   </picture>
-  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Each unique overlap combination is a commutation state</small></i></span>
+  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Each unique overlap combination is a different commutation state</small></i></span>
 
 <picture  >
     <source srcset="commutation_decode.png" type="image/jpeg">
-    <?php img("commutation_decode.png", 50, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
+    <?php img("commutation_decode.png", 100, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
   </picture>
-  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Commutation state decoder</small></i></span>
+  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Inside commutation state decoder (LabView)</small></i></span>
 
 
 <picture  >
-    <source srcset="halls2.jpg" type="image/jpeg">
-    <?php img("halls2.jpg", 50, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
+    <source srcset="halls2.bmp" type="image/jpeg">
+    <?php img("halls2.bmp", 100, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
   </picture>
   <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Swapping any two phases appears to produce a similar hall sensor pattern</small></i></span>
 
 
 <picture  >
-    <source srcset="state2.jpg" type="image/jpeg">
-    <?php img("state2.jpg", 50, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
+    <source srcset="state2.bmp" type="image/jpeg">
+    <?php img("state2.bmp", 100, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
   </picture>
   <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Swapping any two phases produces opposite rotation</small></i></span>
+
+<?php h("HOW TO WIRE MOTOR PHASES TO APPEAR AS (ROUGH) HALL SENSOR SIGNALS");?>
+
+<picture  >
+    <source srcset="motor.png" type="image/jpeg">
+    <?php img("motor.png", 50, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>
+  </picture>
+  <span style="text-align: center; display: block; margin-bottom: 2ch;"><i><small>Motor phases of a delta-wound motor</small></i></span>
 
 <?h("");?><p>
     
