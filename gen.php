@@ -160,5 +160,6 @@ function generate($src_dir) {
 generate(".");
 generate("dreamcast_hacking");
 generate("motor_phasing");
+generate("about");
 // Add articles here as you write them...
 ?>

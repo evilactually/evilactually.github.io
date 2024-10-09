@@ -1,7 +1,6 @@
-<?php genheader("Detecting motor phasing from back-EMF", "September 7, 2024");?>
+<?php genheader("Detecting motor phasing from back-EMF", "October 8, 2024");?>
 
 <p>
-
     There's a very close correlation between the shape of back EMF of a motor and a typical hall sensor signal that can allow you to characterize motor winding. In this setup the motor is forced to turn by external torque and the back EMF is measured by three analogue probes connected between <em>U</em>, <em>V</em> and <em>W</em> phases. No hall sensors are needed. There are motor testers on the market that can do that. In this article I'm going to show how to detect motor direction from back EMF signal and compare it to a hall sensor signal. 
 
 <br/>
@@ -29,7 +28,7 @@
 
 
 <p>
-The three hall signals can be combined into a COMMUTATION STATE signal, which is always one the integer numbers 1, 2, 3, 4, 5, 6. (It is six states, because only 2 halls are on at the same time out of 3. It is the combinatorics formula "3 choose 2", which is 6). The commutation state produces the stair step pattern as seen in the graph:
+The three hall signals can be combined into a COMMUTATION STATE signal, which is always one of the integer numbers 1, 2, 3, 4, 5, 6. (It is six states, because only 2 halls are on at the same time out of 3. It is the combinatorics formula "3 choose 2", which is 6). The commutation state produces the stair step pattern as seen in the graph:
 <picture  >
     <source srcset="state.bmp" type="image/jpeg">
     <?php img("state.bmp", 100, "display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;");?>

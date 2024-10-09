@@ -117,14 +117,13 @@
   <body><br><center>
     <div style="display: inline-block; vertical-align:middle;">
 <a href="/" class="title"><b>Secret Life Of Electronics</b><br>
-</a><hr/><div style="text-align: justify;display: inline-block; width: 100%;">
-<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="/contact/index.html">EMAIL</a> &nbsp;<a class="title" href="../rss.xml">RSS</a> &nbsp;<a class="title" href="https://paypal.me/fabiensanglard">DONATE</a></div></div>
+</a><hr/><div style="text-align: center;display: inline-block; width: 100%;">
+<a class="title" href="/about">ABOUT</a> &nbsp;<a class="title" href="mailto:vlad.shcherbakov@gmail.com">EMAIL</a> &nbsp;<a class="title" href="../rss.xml">RSS</a></div></div>
 </center><br><br>
 <div style="margin-bottom: 2ch;text-transform: none;">
-September 7, 2024</div>
+October 8, 2024</div>
 <div class='heading'>Detecting motor phasing from back-EMF</div><hr/>
 <p>
-
     There's a very close correlation between the shape of back EMF of a motor and a typical hall sensor signal that can allow you to characterize motor winding. In this setup the motor is forced to turn by external torque and the back EMF is measured by three analogue probes connected between <em>U</em>, <em>V</em> and <em>W</em> phases. No hall sensors are needed. There are motor testers on the market that can do that. In this article I'm going to show how to detect motor direction from back EMF signal and compare it to a hall sensor signal. 
 
 <br/>
@@ -149,7 +148,7 @@ September 7, 2024</div>
 
 
 <p>
-The three hall signals can be combined into a COMMUTATION STATE signal, which is always one the integer numbers 1, 2, 3, 4, 5, 6. (It is six states, because only 2 halls are on at the same time out of 3. It is the combinatorics formula "3 choose 2", which is 6). The commutation state produces the stair step pattern as seen in the graph:
+The three hall signals can be combined into a COMMUTATION STATE signal, which is always one of the integer numbers 1, 2, 3, 4, 5, 6. (It is six states, because only 2 halls are on at the same time out of 3. It is the combinatorics formula "3 choose 2", which is 6). The commutation state produces the stair step pattern as seen in the graph:
 <picture  >
     <source srcset="state.bmp" type="image/jpeg">
     <img loading="lazy" src="state.bmp" width="708" height="407" style="width: 100%; height: auto; display: block; margin-top: 2ch; margin-bottom: 2ch; margin-left: auto;margin-right: auto;"/>  </picture>
