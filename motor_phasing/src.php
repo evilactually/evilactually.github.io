@@ -120,3 +120,7 @@ There are a few important differences in how coils behave as compared to hall se
 <p>
     Now detecting motor direction is as easy as detecting stair up or stair down pattern. In my implementation I add all 60 EDEG deltas from each commutation state change and add them up. If the sum is positive I count it as CW direction. If the sum is negative then it is CCW direction.  
 </p>
+
+<?php h("LINKS");?>
+
+<a href="https://github.com/evilactually/hall_effect_benchmarking/tree/dir">LabView Source Code</a>.
