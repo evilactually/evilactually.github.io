@@ -123,4 +123,5 @@ There are a few important differences in how coils behave as compared to hall se
 
 <?php h("LINKS");?>
 
-<a href="https://github.com/evilactually/hall_effect_benchmarking/tree/dir">LabView Source Code</a>.
+<a href="https://github.com/shcherbakaite/hall_effect_benchmarking/tree/dir">LabView Source Code</a>.
+

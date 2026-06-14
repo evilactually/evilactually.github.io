@@ -136,7 +136,7 @@ December 11, 2018</div>
     <source srcset="ikaruga_gdrom.webp" type="image/webp">
     <img loading="lazy" src="ikaruga_gdrom.png" width="300" height="301" style="width: 21%; height: auto; float:left;margin-bottom: 2ch; margin-left: 2ch; margin-right:1ch;"/>  </picture>
     
-Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Sources\evilactually.github.io\gen.php on line 63
+Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Source\evilactually.github.io\gen.php on line 63
 <img loading="lazy" src="gd-rom.svg" width="285.55646" height="285.55646" style="width: 21%; height: auto; float:left;margin-bottom: 2ch; margin-right: 2ch;"/>    A GD-ROM had the same physical dimensions as a CD-ROM but at the macro level it was made of two areas visible with naked eyes.<br/>
    <br/> The first (dark) section was a low density, CD-ROM compatible, area holding up to 35 MiB. It contained a voiceover audio track reminding user that the content was intended for SEGA Dreamcast and not for a CD player<a name="back_1" style="text-decoration: none;" href="#footnote_1"><sup>[1]</sup></a>.
 
@@ -161,7 +161,7 @@ Deprecated: explode(): Passing null to parameter #2 ($string) of type string is 
     More importantly, IP.BIN contained the name of the game executable. This name was looked up in the GD-ROM file-system and loaded in RAM at 0x8C010000 before execution was transfered there. Usually the filename of the game executable was "1ST_READ.BIN".<br/>
        <br/> 
     
-Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Sources\evilactually.github.io\gen.php on line 63
+Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Source\evilactually.github.io\gen.php on line 63
 <img loading="lazy" src="gd-rom_loading.svg" width="1384.2161" height="287.79181" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>   <br/>
    With the CPU jumping to 0x8C010000, the game started as intended.<br/>
  </p>
@@ -174,7 +174,7 @@ Deprecated: explode(): Passing null to parameter #2 ($string) of type string is 
   <br/>
     SEGA engineers knew that MIL-CD booting could be used as an attack vector so they added a protection. When the console detected a CD-ROM, the BOOTROM loaded IP.BIN normally but scrambled 1ST_READ.BIN, seemingly at random. A valid executable was therefore turned into mashed potatoes which promptly crashed the console.<br/>
     
-Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Sources\evilactually.github.io\gen.php on line 63
+Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Source\evilactually.github.io\gen.php on line 63
 <img loading="lazy" src="cd-rom_loading.svg" width="1384.2161" height="287.79181" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>   From there it looked like the console was safe. The Dreamcast was able to recognize a pirated game, corrupt the executable at load time, and defeated pirates.<br/>
   </p>
 
@@ -183,7 +183,7 @@ Deprecated: explode(): Passing null to parameter #2 ($string) of type string is 
    <div class='heading'>Give me my long sword, ho!</div><hr/><p>
     The mashed potatoes problem was solved when a Katana SDK (the official Sega SDK for the Dreamcast) was stolen<a name="back_6" style="text-decoration: none;" href="#footnote_6"><sup>[6]</sup></a> by the hacking team "Utopia" in late 1999. It turned out that the scrambler was nothing more than "security through obscurity". The SDK contained a reverse-scrambler which transformed a valid executable into reverse-mashed-potatoes so it would be valid again when loaded and scrambled by the Dreamcast when booting from a CD-ROM.<br/>
     
-Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Sources\evilactually.github.io\gen.php on line 63
+Deprecated: explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\Users\vlads\Source\evilactually.github.io\gen.php on line 63
 <img loading="lazy" src="cd-rom_loading_reverse.svg" width="1384.2161" height="287.79181" style="width: 100%; height: auto; margin-top: 2ch; margin-bottom: 2ch;"/>   <br/>
  </p>
   <div style="clear:both;"></div>
