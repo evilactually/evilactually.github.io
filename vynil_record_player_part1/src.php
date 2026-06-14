@@ -14,7 +14,6 @@
     We can build a relatively simple speed controller using a DC motor with hall sensors and some feedback loop. Take hall sensor signal, pass it through low-pass filter. Take the difference between the filtered feedback signal and a set point, invert it and amplify it. Finally, use amplified error as control signal to drive the motor. This is a standard proportional control loop that can be implemented with discreet components.
 </p>
 
-
 <?php h("LINKS");?>
 <p>
     <a href="https://www.adafruit.com/product/4416">Geared DC Motor with Magnetic Encoder Outputs - 7 VDC 1:20 Ratio</a>.
