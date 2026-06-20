@@ -160,7 +160,7 @@ function generate($src_dir) {
 generate(".");
 // generate("dreamcast_hacking");
 generate("motor_phasing");
-generate("vynil_record_player_part1");
+//generate("vynil_record_player_part1");
 generate("about");
 // Add articles here as you write them...
 ?>
